@@ -1,5 +1,6 @@
 import axios from "axios"
+const config = require('config').default;
 const instance = axios.create({
-    baseURL:"http://13.51.109.27:8000/api"
+    baseURL:config.get('serverURL');
 })
 export default instance
